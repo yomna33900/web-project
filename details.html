@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #fdf4f4;
+      color: #043d49;
+    }
+
+    .details-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #1f7081;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    #productImage {
+      width: 300px; /* حجم الصورة */
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .product-details {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .product-details h1 {
+      color: #043d49;
+    }
+
+    .product-details p {
+      font-size: 1.2em;
+      color: #777;
+    }
+
+    .btn-add-to-cart {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #1f7081;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-align: center;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-add-to-cart:hover {
+      background-color: #0b7186; 
+      transform: translateY(-3px); 
+    }
+
+    .btn-add-to-cart:active {
+      transform: translateY(2px); 
+    }
+
+    body {
+      background-color: rgba(138, 194, 210, 0.95); 
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .btn-add-to-favorites {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #1f7081;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-add-to-favorites:hover {
+      background-color: #0b7186; 
+  transform: translateY(-3px); 
+}
+
+.btn-add-to-favorites:active {
+  transform: translateY(2px); 
+}
+
+  </style>
+</head>
+<body>
+    <div class="product-details">
+        <img id="productImage" src="" alt="Product Image" />
+        <h1 id="productTitle"></h1>
+        <p id="productDesc"></p>
+        <p id="productPrice"></p>
+        
+        <!-- Rating stars -->
+        <div id="productRating">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+        </div>
+
+        <a href="#" class="btn-add-to-cart">Add to Cart</a>
+        <a href="#" class="btn-add-to-favorites">Add to Favorites</a>
+
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title');
+        const desc = urlParams.get('desc');
+        const image = urlParams.get('image');
+        const price = urlParams.get('price');
+
+        // Set product details dynamically
+        document.getElementById('productTitle').innerText = title;
+        document.getElementById('productDesc').innerText = desc;
+        document.getElementById('productImage').src = image;  // Set the product image
+        document.getElementById('productPrice').innerText = price;  // Set the product price
+
+        // Example of setting a 4-star rating (this can be dynamic too)
+        const stars = document.getElementById('productRating').getElementsByTagName('span');
+        let rating = 4; // You can dynamically set this based on product rating
+        for (let i = 0; i < rating; i++) {
+            stars[i].style.color = 'gold';
+        }
+        document.querySelector('.btn-add-to-favorites').addEventListener('click', function(e) {
+    e.preventDefault();  
+    alert('Added to favorites !');
+});
+    </script>
+</body>
+</html>

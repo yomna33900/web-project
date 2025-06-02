@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care</title>
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" herf="details.html"/>
+</head>
+<body>
+    <!-- Main Navigation -->
+    <div class="header-main container">
+        <div class="logo">
+            <h1>Skin Care</h1>
+        </div>
+        <nav class="nav-menu">
+        
+            <a href="home.html">Home</a>
+    
+            <a href="product.html">Products</a>  <!-- دا هيفتح صفحة المنتجات -->
+    
+            <a href="about.html">About</a>        <!-- دا هيفتح صفحة about -->
+    
+            <a href="contact.html">Contact</a> <!-- دا هيفتح صفحة contact -->
+           
+          </nav>
+     
+    </div>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our products</h2>
+        <div class="filter-bar">
+            <label for="priceFilter">Filter by Price:</label>
+            <select id="priceFilter" onchange="filterProducts()">
+              <option value="all">All</option>
+              <option value="under20">Under $20</option>
+              <option value="20to25">$20 - $25</option>
+              <option value="above25">Above $25</option>
+            </select>
+        </div>
+        <div class="product-grid">
+            <!-- Product 1-->
+            <div class="product-item">
+                <img src="product3_.jpg" alt="Face Moisturizer" />
+                <h3>Face Moisturizer</h3>
+                <p>$25.99</p>
+                <div class="product-buttons">
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Face%20Moisturizer&desc=A%20deeply%20moisturizing%20cream%20that%20leaves%20your%20skin%20soft%20and%20nourished.%20Perfect%20for%20dry%20and%20normal%20skin%20types.&image=product3_.jpg&price=$25.99" class="btn-details">Details</a>
+                 </div>
+            </div>
+
+            <!-- Product 2-->
+            <div class="product-item">
+                <img src="product4.jpg" alt="Glow Cream" />
+                <h3>Glow Cream</h3>
+                <p>$18.50</p>
+                <div class="product-buttons">
+                    <label for="quantity2">Quantity:</label>
+                    <input type="number" id="quantity2" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Glow%20Cream&desc=A%20cream%20designed%20to%20give%20your%20skin%20a%20natural%20glow%20while%20providing%20deep%20nourishment%20and%20hydration.&image=product4.jpg&price=$18.50" class="btn-details">Details</a>
+                </div>
+            </div>
+
+            <!-- Product 3-->
+            <div class="product-item">
+                <img src="product5.jpg" alt="Vitamin C Toner" />
+                <h3>Vitamin C Toner</h3>
+                <p>$22.00</p>
+                <div class="product-buttons">
+                    <label for="quantity3">Quantity:</label>
+                    <input type="number" id="quantity3" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Vitamin%20C%20Toner&desc=A%20toner%20enriched%20with%20Vitamin%20C%20that%20brightens%20your%20skin%20and%20helps%20with%20skin%20tone%20evenness.&image=product5.jpg&price=$22.00" class="btn-details">Details</a>
+                </div>
+            </div>
+
+            <!-- Product 4-->
+            <div class="product-item">
+                <img src="product6.jpg" alt="SPF 50 Sunscreen" />
+                <h3>SPF 50 Sunscreen</h3>
+                <p>$19.99</p>
+                <div class="product-buttons">
+                    <label for="quantity4">Quantity:</label>
+                    <input type="number" id="quantity4" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=SPF%2050%20Sunscreen&desc=High-protection%20sunscreen%20with%20SPF%2050%2C%20designed%20to%20protect%20your%20skin%20from%20harmful%20UV%20rays.&image=product6.jpg&price=$19.99" class="btn-details">Details</a>
+                </div>
+            </div>
+
+            <!-- Product 5-->
+            <div class="product-item">
+                <img src="product7_.jpg" alt="Gentle Face Cleanser" />
+                <h3>Gentle Face Cleanser</h3>
+                <p>$29.99</p>
+                <div class="product-buttons">
+                    <label for="quantity5">Quantity:</label>
+                    <input type="number" id="quantity5" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Gentle%20Face%20Cleanser&desc=A%20soft%20and%20gentle%20cleanser%20that%20removes%20impurities%20without%20irritating%20the%20skin.&image=product7_.jpg&price=$29.99" class="btn-details">Details</a>
+                </div>
+            </div>
+
+            <!-- Product 6-->
+            <div class="product-item">
+                <img src="product8.jpg" alt="Exfoliating Scrub" />
+                <h3>Exfoliating Scrub</h3>
+                <p>$15.99</p>
+                <div class="product-buttons">
+                    <label for="quantity6">Quantity:</label>
+                    <input type="number" id="quantity6" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Exfoliating%20Scrub&desc=A%20scrub%20that%20removes%20dead%20skin%20cells%20and%20promotes%20healthy%20glowing%20skin.&image=product8.jpg&price=$15.99" class="btn-details">Details</a>
+                </div>
+            </div>
+
+            <!-- Product 7-->
+            <div class="product-item">
+                <img src="product9.jpg" alt="Nourishing Facial Oil" />
+                <h3>Nourishing Facial Oil</h3>
+                <p>$15.99</p>
+                <div class="product-buttons">
+                    <label for="quantity7">Quantity:</label>
+                    <input type="number" id="quantity7" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Nourishing%20Facial%20Oil&desc=A%20nourishing%20oil%20that%20deeply%20hydrates%20and%20revitalizes%20your%20skin.&image=product9.jpg&price=$15.99" class="btn-details">Details</a>
+            </div>
+        </div>
+            <!-- Product 8-->
+            <div class="product-item">
+                <img src="product11.jpg" alt="Vaseline" />
+                <h3>Vaseline</h3>
+                <p>$15.99</p>
+                <div class="product-buttons">
+                    <label for="quantity8">Quantity:</label>
+                    <input type="number" id="quantity8" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Vaseline&desc=A%20moisturizing%20balm%20that%20heals%20and%20protects%20dry%20skin.&image=product11.jpg&price=$15.99" class="btn-details">Details</a>
+                </div>
+            </div>
+
+            <!-- Product 9-->
+            <div class="product-item">
+                <img src="product12jpg.jpg" alt="Laneige Lip Mask" />
+                <h3>Laneige Lip Mask</h3>
+                <p>$15.99</p>
+                <div class="product-buttons">
+                    <label for="quantity9">Quantity:</label>
+                    <input type="number" id="quantity9" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Laneige%20Lip%20Mask&desc=A%20nourishing%20lip%20mask%20that%20helps%20keep%20your%20lips%20soft%20and%20hydrated.&image=product12jpg.jpg&price=$15.99" class="btn-details">Details</a>
+                </div>
+            </div>
+
+            <!-- Product 10-->
+            <div class="product-item">
+                <img src="product13.jpg" alt="COSRX Acne Pimple Master" />
+                <h3>COSRX Acne Pimple Master</h3>
+                <p>$15.99</p>
+                <div class="product-buttons">
+                    <label for="quantity10">Quantity:</label>
+                    <input type="number" id="quantity10" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=COSRX%20Acne%20Pimple%20Master&desc=A%20treatment%20patch%20for%20acne%20that%20helps%20clear%20blemishes%20and%20prevents%20further%20breakouts.&image=product13.jpg&price=$15.99" class="btn-details">Details</a>
+                </div>
+            </div>
+
+            <!-- Product 11-->
+            <div class="product-item">
+                <img src="product1.jpg" alt="Hydrating Serum" />
+                <h3>Hydrating Serum</h3>
+                <p>$14.99</p>
+                <div class="product-buttons">
+                    <label for="quantity11">Quantity:</label>
+                    <input type="number" id="quantity11" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Hydrating%20Serum&desc=A%20lightweight%20serum%20that%20deeply%20hydrates%20and%20revitalizes%20the%20skin.&image=product1.jpg&price=$14.99" class="btn-details">Details</a>
+                </div>
+            </div>
+
+            <!-- Product 12-->
+            <div class="product-item">
+                <img src="product2.jpg" alt="Charcoal Face Mask" />
+                <h3>Charcoal Face Mask</h3>
+                <p>$12.99</p>
+                <div class="product-buttons">
+                    <label for="quantity12">Quantity:</label>
+                    <input type="number" id="quantity12" name="quantity" min="1" value="1" />
+                    <a href="#" class="btn-add-to-cart" onclick="addToCart()">Add to Cart</a>
+                    <a href="details.html?title=Charcoal%20Face%20Mask&desc=A%20deep-cleansing%20mask%20that%20removes%20impurities%20and%20detoxifies%20the%20skin.&image=product2.jpg&price=$12.99" class="btn-details">Details</a>
+                </div>         
+     </div>
+    </section>
+
+    <!-- Details Popup -->
+    <div class="details-popup" id="detailsPopup">
+        <div class="popup-content">
+            <h2 id="popupTitle"></h2>
+            <p id="popupDescription"></p>
+            <div class="popup-close">
+                <a href="#" onclick="closeDetailsPopup()">Close</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to show product details in a popup
+        function showDetails(title, description) {
+            document.getElementById('popupTitle').innerText = title;
+            document.getElementById('popupDescription').innerText = description;
+            document.getElementById('detailsPopup').style.display = 'flex';
+        }
+
+        // Function to close the details popup
+        function closeDetailsPopup() {
+            document.getElementById('detailsPopup').style.display = 'none';
+        }
+
+        // Function to add to cart (can be expanded later)
+        function addToCart() {
+            alert('Product added to cart!');
+        }
+        function filterProducts() {
+  const selected = document.getElementById("priceFilter").value;
+  const items = document.querySelectorAll(".product-item");
+
+  items.forEach(item => {
+    const priceText = item.querySelector("p").innerText.replace('$', '');
+    const price = parseFloat(priceText);
+
+    let show = false;
+
+    if (selected === "all") {
+      show = true;
+    } else if (selected === "under20" && price < 20) {
+      show = true;
+    } else if (selected === "20to25" && price >= 20 && price <= 25) {
+      show = true;
+    } else if (selected === "above25" && price > 25) {
+      show = true;
+    }
+
+    item.style.display = show ? "block" : "none";
+  });
+}
+
+    </script>
+  
+  </nav>
+</body>
+</html>
